@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Stream</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+      }
+      video {
+        width: 100%;
+      }
+      #box {
+        background-color: #1a1b26;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+      }
+      #video {
+        width: 480px;
+        border-radius: 24px;
+      }
+
+      @media screen and (max-width: 576px) {
+        #video {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div id="video">
+        <video controls autoplay loop>
+          <source src="/video" type="video/mp4" />
+          <source src="/video" type="video/ogg" />
+          Cannot process video
+        </video>
+      </div>
+    </div>
+  </body>
+</html>
